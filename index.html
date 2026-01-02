@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>ARKK TRAVELS | Travel Agency</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body{margin:0;font-family:Arial;background:#f4f6f8}
+header{background:linear-gradient(135deg,#003366,#005fa3);color:white;padding:30px;text-align:center}
+nav{background:#002244;text-align:center;padding:10px}
+nav a{color:white;margin:0 15px;text-decoration:none;font-weight:bold}
+.slideshow-wrapper{background:linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)),url('https://images.unsplash.com/photo-1506012787146-f92b2d7d6d96');background-size:cover;padding:50px 0}
+.slideshow{max-width:900px;margin:auto}
+.slideshow img{width:100%;border-radius:10px;display:none}
+.section{max-width:900px;margin:40px auto;background:white;padding:30px;border-radius:10px}
+footer{background:#003366;color:white;text-align:center;padding:15px}
+.whatsapp{position:fixed;bottom:20px;right:20px;background:#25D366;color:white;padding:15px;border-radius:50%;text-decoration:none}
+</style>
+</head>
+<body>
+
+<header>
+<h1>ARKK TRAVELS</h1>
+<p>✈️ Professional Travel Agency</p>
+</header>
+
+<nav>
+<a href="#home">Home</a>
+<a href="#about">About</a>
+<a href="#contact">Contact</a>
+</nav>
+
+<div class="slideshow-wrapper" id="home">
+<div class="slideshow">
+<img src="slide1.jpg" class="slide">
+<img src="slide2.jpg" class="slide">
+</div>
+</div>
+
+<div class="section" id="about">
+<h2>About Us</h2>
+<p>ARKK TRAVELS is a professional travel agency providing worldwide travel solutions.</p>
+<p>ARKK TRAVELS ایک قابل اعتماد ٹریول ایجنسی ہے جو بہترین سفری سہولیات فراہم کرتی ہے۔</p>
+</div>
+
+<div class="section" id="contact">
+<h2>Contact</h2>
+<p>Email: arkktravels@gmail.com</p>
+<p>WhatsApp: +44 7760 917942</p>
+<a href="https://wa.me/447760917942">Chat on WhatsApp</a>
+</div>
+
+<footer>
+<p>© 2025 ARKK TRAVELS</p>
+</footer>
+
+<a class="whatsapp" href="https://wa.me/447760917942">💬</a>
+
+<script>
+let i=0;let slides=document.getElementsByClassName("slide");
+function show(){for(let j=0;j<slides.length;j++){slides[j].style.display="none";}
+i++;if(i>slides.length){i=1;}slides[i-1].style.display="block";}
+show();setInterval(show,3000);
+</script>
+
+</body>
+</html>
