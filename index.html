@@ -2,77 +2,178 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>ARKK TRAVELS</title>
+<title>ARKK TRAVELS | Trusted Travel Agency</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: #000;
+body{
+    margin:0;
+    font-family:Arial, sans-serif;
+    background:#000;
+    color:#fff;
 }
 
-.slider {
-    position: relative;
-    width: 100%;
-    height: 90vh;
-    overflow: hidden;
+/* SLIDER */
+.slider{
+    position:relative;
+    width:100%;
+    height:70vh;
+    overflow:hidden;
+}
+.slide{
+    position:absolute;
+    width:100%;
+    height:100%;
+    opacity:0;
+    animation:fade 15s infinite;
+}
+.slide img{
+    width:100%;
+    height:100%;
+    object-fit:contain;
+    background:#000;
+}
+.slide:nth-child(1){animation-delay:0s;}
+.slide:nth-child(2){animation-delay:5s;}
+.slide:nth-child(3){animation-delay:10s;}
+
+@keyframes fade{
+    0%{opacity:0;}
+    10%{opacity:1;}
+    30%{opacity:1;}
+    40%{opacity:0;}
+    100%{opacity:0;}
 }
 
-.slide {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    animation: slideShow 15s infinite;
+/* HERO TEXT */
+.hero{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    text-align:center;
+    background:rgba(0,0,0,0.5);
+    padding:20px 30px;
+    border-radius:10px;
+}
+.hero h1{color:#f5b041;margin:0;}
+.hero p{margin-top:10px;color:#ddd;}
+
+/* SECTIONS */
+section{
+    padding:50px 20px;
+    text-align:center;
+}
+h2{color:#f5b041;margin-bottom:15px;}
+p{max-width:900px;margin:auto;line-height:1.7;color:#ddd;}
+
+/* SERVICES */
+.services{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:20px;
+}
+.service-box{
+    background:#111;
+    padding:20px;
+    width:250px;
+    border-radius:10px;
 }
 
-.slide img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain; /* size chhota aur fit */
-    background: #000;
+/* BUTTONS */
+.btn{
+    display:inline-block;
+    margin:10px;
+    padding:15px 25px;
+    border-radius:30px;
+    text-decoration:none;
+    font-weight:bold;
 }
+.whatsapp{background:#25D366;color:#000;}
+.channel{background:#f5b041;color:#000;}
 
-/* animation timing */
-.slide:nth-child(1) { animation-delay: 0s; }
-.slide:nth-child(2) { animation-delay: 5s; }
-.slide:nth-child(3) { animation-delay: 10s; }
-
-@keyframes slideShow {
-    0% { opacity: 0; }
-    10% { opacity: 1; }
-    30% { opacity: 1; }
-    40% { opacity: 0; }
-    100% { opacity: 0; }
-}
-
-.footer {
-    text-align: center;
-    padding: 15px;
-    color: #fff;
-    background: #111;
+/* FLOATING WHATSAPP */
+.float-wa{
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    background:#25D366;
+    color:#000;
+    padding:15px 18px;
+    border-radius:50%;
+    font-size:22px;
+    text-decoration:none;
 }
 </style>
 </head>
 
 <body>
 
+<!-- SLIDESHOW -->
 <div class="slider">
-    <div class="slide">
-        <img src="slide1.jpg" alt="ARKK Travels Slide 1">
-    </div>
-    <div class="slide">
-        <img src="slide2.jpg" alt="ARKK Travels Slide 2">
-    </div>
-    <div class="slide">
-        <img src="slide3.jpg" alt="ARKK Travels Slide 3">
+    <div class="slide"><img src="slide1.jpg.png"></div>
+    <div class="slide"><img src="slide2.jpg.jpeg"></div>
+    <div class="slide"><img src="slide3.jpg.png"></div>
+
+    <div class="hero">
+        <h1>ARKK TRAVELS</h1>
+        <p>Your Trusted Travel Partner</p>
     </div>
 </div>
 
-<div class="footer">
-    © ARKK TRAVELS – Trusted Travel Partner
+<!-- ABOUT -->
+<section>
+<h2>About Us</h2>
+<p>
+ARKK Travels is a reliable travel agency offering Umrah packages,
+air tickets, hotel bookings, transport and complete travel solutions.
+Customer satisfaction and transparency are our top priorities.
+</p>
+</section>
+
+<!-- SERVICES -->
+<section>
+<h2>Our Services</h2>
+<div class="services">
+    <div class="service-box">✈️ Airline Tickets</div>
+    <div class="service-box">🕋 Umrah Packages</div>
+    <div class="service-box">🏨 Hotel Bookings</div>
+    <div class="service-box">🚐 Transport Services</div>
+    <div class="service-box">📄 Visa Assistance</div>
 </div>
+</section>
+
+<!-- WHY US -->
+<section>
+<h2>Why Choose ARKK Travels?</h2>
+<p>
+✔ Trusted & Transparent  
+✔ Affordable Packages  
+✔ 24/7 Customer Support  
+✔ Professional Service
+</p>
+</section>
+
+<!-- CONTACT -->
+<section>
+<h2>Contact Us</h2>
+<p>
+📞 WhatsApp: +44 7760 917942<br><br>
+✉️ Email: arkktravels@gmail.com
+</p>
+
+<a class="btn whatsapp" href="https://wa.me/447760917942" target="_blank">
+Chat on WhatsApp
+</a>
+
+<a class="btn channel" href="https://whatsapp.com/channel/0029VbBrb5dICVfrYNSDX82N" target="_blank">
+Join WhatsApp Channel
+</a>
+</section>
+
+<!-- FLOATING BUTTON -->
+<a class="float-wa" href="https://wa.me/447760917942" target="_blank">💬</a>
 
 </body>
 </html>
